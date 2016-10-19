@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		
+		<title>C2B-用户中心</title>
+		<link rel="stylesheet" type="text/css" href="common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="common/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css"/>
+		<link rel="stylesheet" type="text/css" href="common/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+		<script type="text/javascript" src="common/js/jquery-2.0.0.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/swiper.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/touch.min.js"></script>
+		<script type="text/javascript" src="common/js/base.js">
+		</script>
+	  
+</head>
+<body>
+	<div class="header">
+			<a  onclick="history.go(-1)"><span class="pubBtn goback iconfont  ai-arrow-down"> &#xe658</span></a>
+			<span class="iconfont headbbsNav">
+				 
+			</span>
+			<a href="index.html"><span class="newLogo"  ><img src="common/img/logoNew.png" alt="" /></span></a>
+			
+			<a href="用户中心.html"><span class="pubBtn  iconfont  headNewUser"><!--&#xe61e;--> <img src="common/img/new2_1.jpg" alt="" /></a>
+			
+			 
+	</div>
+<div class="c2bMain mallInfoBox">
+	<div class="bnnerBox">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide blue-slide">
+						<a href="商城-商城详情.html"><img src="common/img/scdzBanner.jpg" alt="" /></a>
+					</div>
+					<div class="swiper-slide blue-slide">
+						<a href="商城-商城详情.html"><img src="common/img/scdzBanner.jpg" alt="" /></a>
+					</div>
+					<div class="swiper-slide blue-slide">
+						<a href="商城-商城详情.html"><img src="common/img/scdzBanner.jpg" alt="" /></a>
+					</div>
+		
+				</div>
+				<div class="pagination"></div>
+		
+			</div>
+
+	</div>
+	<div class="mallpropage">
+		<div class="mallpropagebiaoti">
+			<h2>盲订送T恤</h2>
+			<span class="price">价格： <b>￥0.00</b></span>
+		</div>
+		<div class="proAttributes">
+			<div class="attributeslist">
+				<label for="">
+					款式:
+				</label>
+				<div class="biaoqianshux">
+					<a  class="attributesTag hover">
+						女款
+						<em></em>
+					</a>
+					<a  class="attributesTag ">男款<em></em></a>
+					<a  class="attributesTag">儿童款<em></em></a>
+					<a  class="attributesTag hui">女款<em></em></a>
+					<a  class="attributesTag">男款<em></em></a>
+				</div>
+			</div>
+			<div class="attributeslist">
+				<label for="">
+					尺寸:
+				</label>
+				<div class="biaoqianshux">
+					<a  class="attributesTag hover">
+						女款  S
+						<em></em>
+					</a>
+					<a  class="attributesTag ">女款  M<em></em></a>
+					<a  class="attributesTag">女款  L<em></em></a>
+					<a  class="attributesTag">男款  M<em></em></a>
+					<a  class="attributesTag">男款  L<em></em></a>
+					<a  class="attributesTag">男款  XL<em></em></a>
+					<a  class="attributesTag">男款  XXL<em></em></a>
+					<a  class="attributesTag hui">儿童款  S<em></em></a>
+					<a  class="attributesTag hui">儿童款  M<em></em></a>
+					<a  class="attributesTag hui">儿童款  L<em></em></a>
+				</div>
+			</div>
+			<div class="attributeslist">
+				<label for="">
+					颜色:
+				</label>
+				<div class="biaoqianshux">
+					<a  class="attributesTag hover">
+						黑色
+						<em></em>
+					</a>
+					 
+				</div>
+			</div>
+			<div class="attributeslist">
+				<label for="">
+					数量:
+				</label>
+				<div class="biaoqianshux">
+					 <input type="text" value="1" class="malltaginput" name="" id="" value="" />
+				</div>
+			</div>
+			
+		</div>
+		<div class="mallbtquyu">
+			<a href="商城-订单提交.html" class="anniu">立即购买</a>
+		</div>
+		
+	</div>
+	<div class="mallwbsm">
+			<div class="mallwbsmtit">
+				商品说明
+			</div>
+			<div class="mallwbsmcont">
+				<p>
+					特殊定制款T恤，纯棉质地，定制图样，开动思维让舒适与个性并行。穿上你的T恤，印出你的宣言。
+					向无声的世界说NO。黑白双色是永远的流行色不过是不老套，自我编制稳重而又不是俏皮的色彩，
+					让这些稀稀疏疏追在服装上的宣言给整个印花风潮一种更风雅、更精致的诠
+					释。
+				</p>
+			</div>
+		</div>
+</div>	 
+<script type="text/javascript">
+$(function  () {
+	
+	var mySwiper = new Swiper('.swiper-container',{
+	    loop: true,
+		autoplay: 3000,
+	    paginationClickable: true,
+	    pagination : '.pagination',
+		grabCursor: true
+  	});
+  	//tag点击切换
+  	$(".biaoqianshux .attributesTag").on("click",function(){
+  		if($(this).hasClass("hui")){
+  			alert("已售完！")
+  		}
+  		else{
+  			$(this).addClass("hover").siblings().removeClass("hover");
+  		}
+  	});
+	
+})
+	
+</script>
+</body>
+</html>

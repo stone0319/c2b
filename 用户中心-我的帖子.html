@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		
+		<title>C2B-用户中心</title>
+		<link rel="stylesheet" type="text/css" href="common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="common/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css"/>
+		<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+		<script type="text/javascript" src="common/js/jquery-2.0.0.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/touch.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/base.js">
+		</script>
+	  
+</head>
+<body>
+	<div class="header">
+			<a  onclick="history.go(-1)"><span class="pubBtn goback iconfont  ai-arrow-down"> &#xe658</span></a>
+			<a href="index.html"><span class="homeBtn"><img src="common/img/logo.png" alt="" /></span></a>
+			用户中心
+			<a href="菜单.html"><span class="pubBtn navBtn iconfont  liebiao7">&#xe64a;</span></a>
+	</div>
+	 
+	<div class="c2bMain  userPostsMod">
+		<div class="mypostsNav">
+			<span class="postsNavC hover">
+				主题帖
+				<em></em>
+			</span>
+			<span class="postsNavC">
+				回复帖
+				<em></em>
+			</span>
+		</div>
+		<div class="mypostsCont">
+			<div class="mypostsquyu">
+				<div class="postslist">
+					<div class="poststitle">
+						 [定义]  人民日报：个性化定制引领制造变革
+					</div>
+					<div class="postsotherTag">
+						<span class="tagleixing">
+							D90专区
+						</span>
+						<span class="tagleixing2">
+							精品
+						</span>
+					</div>
+					<div class="postsotherinfo">
+						<span class="date">2016-08-01 12:12</span>
+						
+						<span class="yuedu">
+							<i class="iconfont ">&#xe6a2;</i>
+							7690
+						</span>
+						<span class="yuedu">
+							<i class="iconfont ">&#xe687;</i>
+							62
+						</span>
+					</div>
+				</div>
+				<div class="postslist">
+					<div class="poststitle">
+						 [定义]  人民日报：个性化定制引领制造变革
+					</div>
+					<div class="postsotherTag">
+						<span class="tagleixing">
+							D90专区
+						</span>
+						<span class="tagleixing2">
+							精品
+						</span>
+					</div>
+					<div class="postsotherinfo">
+						<span class="date">2016-08-01 12:12</span>
+						
+						<span class="yuedu">
+							<i class="iconfont ">&#xe6a2;</i>
+							7690
+						</span>
+						<span class="yuedu">
+							<i class="iconfont ">&#xe687;</i>
+							62
+						</span>
+					</div>
+				</div>
+				<div class="postslist">
+					<div class="poststitle">
+						 [定义]  人民日报：个性化定制引领制造变革
+					</div>
+					<div class="postsotherTag">
+						<span class="tagleixing">
+							D90专区
+						</span>
+						<span class="tagleixing2">
+							精品
+						</span>
+					</div>
+					<div class="postsotherinfo">
+						<span class="date">2016-08-01 12:12</span>
+						
+						<span class="yuedu">
+							<i class="iconfont ">&#xe6a2;</i>
+							7690
+						</span>
+						<span class="yuedu">
+							<i class="iconfont ">&#xe687;</i>
+							62
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mypostsquyu" style="display: none;">
+				<div class="postslist huifutiezi">
+					<div class="poststitle">
+						 666
+					</div>
+					<div class="huifudabg">
+						<div class="poststitle">
+						 [定义]  人民日报：个性化定制引领制造变革
+						</div>
+						<div class="postsotherTag">
+							<span class="tagleixing">
+								D90专区
+							</span>
+							 
+						</div>
+					</div>
+					<div class="postsotherinfo">
+						<span class="date">2016-08-01 12:12</span>
+					</div>
+					 
+				 
+				</div>
+				<div class="postslist huifutiezi">
+					<div class="poststitle">
+						 回复<span class="otherUser">@疯狂的石头哈哈哈:</span>设计师好帅噢～
+					</div>
+					<div class="huifudabg">
+						<div class="yinyong">
+							引用:花田小溪发表于2016-08-01 12:12
+						</div>
+						<div class="qtpinglun">
+						 上汽大通还带来了另外两款新能源产品，纯电动宽体轻客EV80和纯电动MPV EG10.
+						</div>
+						<div class="poststitle">
+						 [定义]  人民日报：个性化定制引领制造变革
+						</div>
+						<div class="postsotherTag">
+							<span class="tagleixing">
+								D90专区
+							</span>
+							 
+						</div>
+					</div>
+					<div class="postsotherinfo">
+						<span class="date">2016-08-01 12:12</span>
+					</div>
+					 
+				 
+				</div>
+				 
+				 
+			</div>
+		</div>
+		
+		 
+		 
+	  
+		 
+	</div>
+	<script type="text/javascript">
+		 $(".mypostsNav .postsNavC").click(function(){
+        	
+        	$(this).addClass("hover").siblings().removeClass("hover");
+        	var num=$(this).index();
+        	$(".mypostsCont .mypostsquyu").eq(num).show().siblings().hide();
+        });
+	</script>
+</body>
+</html>

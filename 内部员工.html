@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		
+		<title>内部员工</title>
+		<link rel="stylesheet" type="text/css" href="common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="common/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css"/>
+		<link rel="stylesheet" type="text/css" href="common/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+		<script type="text/javascript" src="common/js/jquery-2.0.0.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/swiper.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/touch.min.js"></script>
+		<script type="text/javascript" src="common/js/base.js">
+		</script>
+	  <style type="text/css">
+	  	
+	  	
+	  </style>
+</head>
+<body>
+	<!--弹框-->
+	<div class="internaltk">
+		<div class="internaltkmask"></div>
+		<div class="internaltkMod">
+			<div class="internaltknr">
+				账号绑定成功
+			</div>
+			<div class="intertktj">
+				<a>确定</a>
+			</div>
+			 
+		</div>
+		
+	</div>
+	<!--弹框end-->
+	<div class="header">
+			<a  href="菜单.html"><span class="pubBtn newmenu  iconfont"> &#xe64a</span></a>
+			<a href="index.html"><span class="newLogo"  ><img src="common/img/logoNew.png" alt="" /></span></a>
+			
+			<a href="用户中心.html"><span class="pubBtn  iconfont  headNewUser"><!--&#xe61e;--> <img src="common/img/new2_1.jpg" alt="" /></a>
+			 
+	</div>
+<div class="c2bMain  internalStaff">
+	<div class="internalStaffHead">
+		此版块仅限内部用户交流使用<br />
+		请先绑定您的域账号
+	</div>
+	<div class="internalstaffCont">
+		<div class="interslist">
+			<label for="">域账号:</label>
+			<input type="text" name="" id="" value="" />
+		</div>
+		<div class="interslist">
+			<label for="">密 码:</label>
+			<input type="text" name="" id="" value="" />
+		</div>
+		<div class="internalpost">
+			<a  >绑定</a>
+			<a  >取消</a>
+		</div>
+		 
+	</div>
+	 
+ 
+</div>	 
+<script type="text/javascript">
+$(function  () {
+	
+	 $(".internalpost a:first-child").on("click",function(){
+	 	$(".internaltk").show();
+	 })
+	 
+	 $(".intertktj").on("click",function(){
+	 	$(".internaltk").hide();
+	 })
+   
+})
+	
+</script>
+</body>
+</html>

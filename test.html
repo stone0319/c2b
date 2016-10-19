@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		
+		<title>C2B-回复</title>
+		<link rel="stylesheet" type="text/css" href="common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="common/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css"/>
+		<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+		<script type="text/javascript" src="common/js/jquery-2.0.0.min.js"></script>
+		<!-- <script type="text/javascript" src="common/js/base.js"></script> -->
+	  
+</head>
+<body>
+	<div class="header">
+			<a onclick="history.go(-1)"><span class="pubBtn goback iconfont  ai-arrow-down"> &#xe658</span></a>
+			<a href="index.html"><span class="homeBtn"><img src="common/img/logo.png" alt="" /></span></a>
+			回复
+			<a href="菜单.html"><span class="pubBtn navBtn iconfont  liebiao7">&#xe64a;</span></a>
+	</div>
+	 
+	<div class="c2bMain">
+	<style>
+		.like em{position: relative; display: inline-block;font-style: normal;}
+	</style>
+	<span class="like"><i class="iconfont zan2">&#xe6b4;</i><em>1</em></span>
+	 
+
+		 <script type="text/javascript">
+ 
+  $(document).ready(function(e) {
+	    $(' .like').click(function(){
+	  // var left = parseInt($(this).offset().left)+10, 
+	  // top =  parseInt($(this).offset().top)-10,
+	  	var flag =1,
+	   		obj=$(this);
+	  if (obj.hasClass("hover")) {
+	  			
+			obj.removeClass("hover");
+
+	   	 	$(this).find("em").append('<div id="zhan">-1</div>');
+
+	  		$('#zhan').css({'position':'absolute','z-index':'1', 'color':'#c30','left':-10+'px','top':-10+'px'}).animate({top:-10-10,left:10-10 },'slow',function(){
+		     						$(this).fadeIn('fast').remove();
+
+		   							var Num = parseInt(obj.find('em').html());
+
+		       						Num--;
+
+		    						obj.find('em').html(Num);
+
+	  							});
+
+			return false;	   
+				  
+	  } 
+	   else{
+	   	obj.addClass("hover");
+	   	 
+
+
+	  	
+			 $(this).find("em").append('<div id="zhan">+1</div>');
+				  $('#zhan').css({'position':'absolute','z-index':'1', 'color':'#c30','left':-10+'px','top':-10+'px'}).animate({top:-10-10,left:10-10 },'slow',function(){
+				   // $(this).fadeIn('fast').remove();
+				   var Num = parseInt(obj.find('em').html());
+				       Num++;
+				    obj.find('em').html(Num);
+				  });
+	  
+	   
+	  return false;
+	   }
+
+	   
+	   
+	  
+ 		});
+ });
+  
+</script>
+		
+		</div>
+	</div>
+</body>
+</html>

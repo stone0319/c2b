@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<title> HTML5 input元素type=range </title>
+<script type="text/javascript" src="common/js/jquery-2.0.0.min.js"></script>
+<style>
+body{
+	margin:50px; ; 
+}
+.scale_panel{
+	font-size:12px;
+	color:#999;
+	width:200px;
+	position:absolute; 
+	line-height:18px; 
+	left:60px;
+	top:-0px;
+}
+.scale_panel .r{
+	float:right;
+}
+.scale span{
+	background:#FF6600; 
+	width:8px;
+	height:16px; 
+	position:absolute; 
+	left:-2px;
+	top:-5px;
+	cursor:pointer;
+}
+.scale{ background-repeat: repeat-x; background-position: 0 100%; background-color: #E4E4E4; border-left: 1px #83BBD9 solid;  width: 200px; height: 3px; position: relative; font-size: 0px; border-radius: 3px; }
+.scale div{ background-repeat: repeat-x; background-color: #3BE3FF; width: 0px; position: absolute; height: 3px; width: 0; left: 0; bottom: 0; }
+li{
+	font-size:12px;
+	line-height:50px;
+	position:relative; 
+	height:50px; 
+	list-style:none;
+}
+.inner > .add{display:none;position:absolute;top:-1000000px;visibility:hidden}.fdad,.adsbygoogle{display:none;position:absolute;top:-1000000px;visibility:hidden}</style>
+</head>
+<body>
+	<div id="testDiv">放在我上面</div> 
+
+
+<script type="text/javascript"> 
+$('#testDiv').mousemove(function(e) { 
+var xx = e.originalEvent.x || e.originalEvent.layerX || 0; 
+var yy = e.originalEvent.y || e.originalEvent.layerY || 0; 
+$(this).text(xx + '---' + yy); 
+}); 
+</script>
+</body>
+</html>

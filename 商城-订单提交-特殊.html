@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<title>C2B-用户中心</title>
+		<link rel="stylesheet" type="text/css" href="common/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="common/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css"/>
+		<link rel="stylesheet" type="text/css" href="common/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+		<script type="text/javascript" src="common/js/jquery-2.0.0.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/swiper.min.js">
+		</script>
+		<script type="text/javascript" src="common/js/touch.min.js"></script>
+		<script type="text/javascript" src="common/js/base.js">
+		</script>
+	  
+</head>
+<body>
+	<div class="header">
+			<a  onclick="history.go(-1)"><span class="pubBtn goback iconfont  ai-arrow-down"> &#xe658</span></a>
+			<span class="iconfont headbbsNav">
+				 
+			</span>
+			<a href="index.html"><span class="newLogo"  ><img src="common/img/logoNew.png" alt="" /></span></a>
+			
+			<a href="用户中心.html"><span class="pubBtn  iconfont  headNewUser"><!--&#xe61e;--> <img src="common/img/new2_1.jpg" alt="" /></a>
+			
+			 
+	</div>
+<div class="c2bMain mallorderPost">
+	<div class="mallopaddress mallddts">
+		<div class="mallddtsHead">
+			<input type="" name="" placeholder="留下您的地址信息，我们把宝贝送到你手上" id="" value="" />
+		</div>
+		<div class="mallddtsotxx clearfix">
+			<input type="" placeholder="收货人" name="" id="" value="" />
+			<input type="" placeholder="请留下您的手机号" name="" id="" value="" />
+		</div>
+	</div>
+	<div class="malldingzhixuts">
+		<div class="protitle">
+			定制要求
+		</div>
+		<div class="malldzupload">
+			<span class="mallsqbtn"><i class="iconfont">&#xe672;</i> 上传图片</span>
+			<div class="mallzuppicshow">
+				<img src="common/img/detail-img.jpg" alt="" />
+				<span class="closeBtn iconfont">&#xe652</span>
+			</div>
+		</div>
+		<div class="malldzupxx">
+			<textarea name="" rows="" placeholder="在此处详细填写您所需要定制的方案以及上传您的图片！以便我们根据您的需求，快速定制出您所需要的商品！" cols=""></textarea>
+		</div>
+	</div>
+	<div class="payaction">
+		<div class="protitle">
+			支付方式
+		</div>
+		<div class="payactionCont">
+			<div class="paylist hover">
+				<div class="paylxNum">支付宝</div>
+				<span class="paychoosebtn"></span>
+			</div>
+			<div class="paylist  ">
+				<div class="paylxNum">微信支付</div>
+				<span class="paychoosebtn"></span>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div class="mallRemarks">
+		<div class="mremarkcon clearfix">
+			备注
+			<span class="mallbeizhu"><input type="" class="mallbeizhuInput" name="" id="" value="" /></span>
+		</div>
+		 
+	</div>
+	<div class="mallpropayxq">
+		<div class="mpxqtitle">
+			个人定制化T恤
+			<span class="payprice"><b>￥190.00</b></span>
+		</div>
+		<div class="maxqcont">
+			<span class="maxqpic"><img src="common/img/d90ProImg.jpg" alt="" /></span>
+			<div class="maxqwbname">
+				第一次预订
+				<span class="sl">X1</span>
+			</div>
+			 
+		</div>
+	</div>
+	<div class="mallfapiaoxx">
+		<div class="protitle">
+			发票信息
+		</div>
+		<div class="mallfapiaocont">
+			 
+				<label for="">
+					<input type="checkbox" name="" id="" value="" />
+					开发票
+				</label>
+			 
+			<span class="fpasrk">
+				发票抬头
+				<input type="text" name="" id="" value="" />
+			</span>
+			
+		</div>
+		 
+	</div>
+	<div class="mallzhifuqy">
+		<span class="zfprice">
+			合计：<b>￥190.00</b>
+		</span>
+		 <a href="" class="ljxdBtn">确认下单</a>
+	</div>
+	
+</div>	 
+<script type="text/javascript">
+$(function  () {
+	
+	 $(".mallfapiaocont label").on("click",function  () {
+	 	$(".fpasrk").toggle();
+	 })
+  	//tag点击切换
+  	$(".payactionCont .paylist").on("click",function(){
+  		 
+  			$(this).addClass("hover").siblings().removeClass("hover");
+  		 
+  	});
+	
+})
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>C2B-发布主题</title>
+    <link rel="stylesheet" type="text/css" href="common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="common/font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="common/fontx/iconfontXi.css" />
+    <link rel="stylesheet" type="text/css" href="common/fontx/demo.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/bbs.css" />
+    <script type="text/javascript" src="common/js/jquery-2.0.0.min.js">
+    </script>
+    <script type="text/javascript" src="common/js/swiper.min.js">
+    </script>
+    <script type="text/javascript" src="common/js/touch.min.js"></script>
+    <script type="text/javascript" src="common/js/base.js">
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a onclick="history.go(-1)"><span class="pubBtn goback iconfont  ai-arrow-down"> &#xe658</span></a>
+        <a href="index.html"><span class="homeBtn"></span></a> 发布主题
+        <a href="菜单.html"><span class="pubBtn navBtn iconfont  liebiao7">&#xe64a;</span></a>
+    </div>
+    <!--活动弹框-->
+    <div class="activityBox" style="display:none;">
+        <div class="activityBounced">
+            <div class="activityTitle"><span class="close iconfont ai-safe">&#xe664;</span></div>
+            <div class="activityCont">
+                <a href=""><img src="common/img/BBS-1.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <!--活动弹框end-->
+    <div class="BBS issue-theme">
+        <div class="BBS-Box">
+            <div class="issue-wrap title">
+                发表帖子
+            </div>
+        </div>
+        <div class="BBS-Box">
+            <div class="issue-wrap">
+                <div class="inner">
+                    <span class="left">选择板块 : </span>
+                    <div class="select-wrap">
+                        <div class="select1">请选择板块</div>
+                        <i class="iconfont you">&#xe60d;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="BBS-Box">
+            <div class="issue-wrap">
+                <div class="inner">
+                    <span class="left">主题分类 : </span>
+                    <div class="select-wrap">
+                        <div class="select2">请选择主题内容</div>
+                        <i class="iconfont you">&#xe60d;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="BBS-Box">
+            <div class="issue-wrap">
+                <div class="inner">
+                    <span class="left">标题 : </span>
+                    <div class="select-wrap">
+                        <input class="center theme-title" value="请输入主题标题" maxlength="20" />
+                        <i class="you chars">还剩20个字符</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-bottom comment-gray">
+            <div class="theme-wrap">
+                <textarea class="comment-area" placeholder="在此输入主题内容"></textarea>
+                <div class="theme-chars">还剩200个字符</div>
+            </div>
+            <div class="BBS-bottom">
+                <div class="bottom-left">
+                    <a href="#?"><img src="common/img/review-pic.png" alt=""></a>
+                    <a href="#?"><img src="common/img/review-expression.png" alt=""></a>
+                </div>
+                <button class="comment">发表评论</button>
+            </div>
+        </div>
+        <div class="select1-details">
+            <ul>
+                <li>板块A</li>
+                <li>板块B</li>
+                <li>板块C</li>
+                <li>板块D</li>
+                <li>板块E</li>
+                <li>板块F</li>
+            </ul>
+        </div>
+        <div class="select2-details">
+            <ul>
+                <li>主题A</li>
+                <li>主题B</li>
+                <li>主题C</li>
+                <li>主题D</li>
+                <li>主题F</li>
+                <li>主题G</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        var $title = $('.theme-title');
+        var $chars = $('.chars');
+        var $theme = $('.comment-area');
+        var $themeChars = $('.theme-chars');
+
+        function changeChars() {
+            $chars.text(function() {
+                var maxLen = 20;
+                var text = '';
+                maxLen = maxLen - $title.val().length;
+                text = '还剩' + maxLen + '个字符';
+                return text;
+            });
+        }
+
+        function changeTheme() {
+            $themeChars.text(function() {
+                var maxLen = 200;
+                var text = '';
+
+                if ($theme.val().length === 0) {
+                    text = '还剩' + maxLen + '个字符';
+                    return text;
+                } else {
+                    var hasInput = $theme.val().length;
+                    maxLen = maxLen - $theme.val().length;
+                    text = '已输入' + hasInput + '个字符,还可以输入' + maxLen + '个字符';
+                    return text;
+                }
+            });
+        }
+
+        $title.on('keyup', changeChars);
+
+        $theme.on('keyup', changeTheme);
+
+        $title.one('click', function() {
+            $title.val('');
+            changeChars();
+        });
+
+        $theme.one('click', function() {
+            $theme.val('');
+            $theme.attr('style', 'color:black');
+            changeTheme();
+        });
+
+        var $comment = $('.comment');
+        var $select1 = $('.select1');
+        var $select2 = $('.select2');
+
+        //select1
+        $select1.on('click', function() {
+            if ($select2.text() === '') {
+                $select2.text('请选择主题内容');
+            }
+            $('.select1-details').show();
+            $('.select2-details').hide();
+        });
+
+        $('.select1-details li').mouseover(function() {
+            $(this).css('background', '#d5d5d5');
+        }).mouseout(function() {
+            $(this).css('background', '#fff');
+        });
+
+
+        $('.select1-details li').on('click', function() {
+            $select1.text($(this).text());
+            $('.select1-details').hide();
+        });
+
+        //select2
+        $select2.on('click', function() {
+            if ($select1.text() === '') {
+                $select1.text('请选择板块');
+            }
+            $('.select2-details').show();
+            $('.select1-details').hide();
+        });
+
+        $('.select2-details li').mouseover(function() {
+            $(this).css('background', '#d5d5d5');
+        }).mouseout(function() {
+            $(this).css('background', '#fff');
+        });
+
+        $('.select2-details li').on('click', function() {
+            $select2.text($(this).text());
+            $('.select2-details').hide();
+        });
+
+        $(document).bind('click', function(e) {
+            var target = $(e.target);
+            if (target[0].className !== 'select1' && target[0].className !== 'select2') {
+                $('.select1-details').hide();
+                $('.select2-details').hide();
+            }
+
+            if ($select1.text() === '') {
+                $select1.text('请选择板块');
+            }
+
+            if ($select2.text() === '') {
+                $select2.text('请选择主题内容');
+            }
+        });
+
+        $comment.on('click', function() {
+            if ($select1.text() !== '请选择板块' && $select2.text() !== '请选择主题内容' && $title.val() !== '' && $theme.val() !== '') {
+                $('.activityBox').show();
+            } else {
+                alert('没有填写完全');
+            }
+        })
+
+    });
+    </script>
+</body>
+
+</html>
